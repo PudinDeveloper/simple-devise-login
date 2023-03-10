@@ -1,3 +1,5 @@
-<h1>Main#home</h1>
-<p>Find me in app/views/main/home.html.erb</p>
-<%= button_to "logout", destroy_user_session_path, method: :delete  %>
+<h1>Hola, iniciaste sesión.</h1>
+<h5 class="mt-4">Usuario: <%= current_user.email %></h5>
+<h5 class="mt-2">Password Hash: <%= current_user.encrypted_password %></h5>
+<h6>(AES-256-GCM Encryption Method)</h6>
+<%= button_to "Cerrar sesión", destroy_user_session_path, method: :delete, class: 'mt-4 btn btn-danger'  %>
