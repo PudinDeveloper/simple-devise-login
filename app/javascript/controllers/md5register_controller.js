@@ -7,8 +7,7 @@ export default class extends Controller {
   }
   login() {
     if (
-      !document.getElementById("user_password").value == "" &&
-      !document.getElementById("user_password_confirmation").value == ""
+      document.getElementById("user_password").value || document.getElementById("user_password_confirmation").value
     ) {
       document.getElementById("user_password").value = md5(
         document.getElementById("user_password").value
